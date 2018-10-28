@@ -14,7 +14,7 @@
     var myChart = echarts.init(document.getElementById('main'));
 
     // 指定图表的配置项和数据
-    var option = {
+    myChart.setOption({
         title: {
             text: 'ECharts 入门示例'
         },
@@ -31,11 +31,9 @@
             type: 'bar',
             data: []
         }]
-    };
+    });
 
-    // myChart.showLoading();
-    // 使用刚指定的配置项和数据显示图表。
-    myChart.setOption(option);
+    myChart.showLoading();
 
     var names=[];    //类别数组（实际用来盛放X轴坐标值）
     var nums=[];    //销量数组（实际用来盛放Y坐标值）
